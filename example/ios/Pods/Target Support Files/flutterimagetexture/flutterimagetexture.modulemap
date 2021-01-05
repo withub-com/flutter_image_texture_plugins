@@ -1,0 +1,6 @@
+framework module flutterimagetexture {
+  umbrella header "flutterimagetexture-umbrella.h"
+
+  export *
+  module * { export * }
+}

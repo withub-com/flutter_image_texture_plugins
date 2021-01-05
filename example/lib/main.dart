@@ -48,10 +48,15 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Plugin example app6'),
         ),
         body: Center(
-          child: FlutterImageTextureWidget(url: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594790452308&di=e461f1fd43aa67086364ccb7f6812085&imgtype=0&src=http%3A%2F%2Fpic.kekenet.com%2F2013%2F0522%2F46061369189999.jpg",width: 300,height: 300,),
+          child: FlutterImageTextureWidget(
+            url:
+                "https://lxq.nmgdj.gov.cn/oss/unsafe/300x300/default/2020102111492926196nepSfY2NU7vVU.jpg",
+            width: 300,
+            height: 300,
+          ),
         ),
       ),
     );
