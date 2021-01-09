@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'flutterimagetexture.dart';
+import 'flutter_image_texture.dart';
 
 class FlutterImageTextureWidget extends StatefulWidget {
   final String url;
@@ -28,8 +28,9 @@ class _FlutterImageTextureWidgetState extends State<FlutterImageTextureWidget> {
   }
 
   Future loadImage() async {
-    textureId = await Flutterimagetexture.loadImg(
+    textureId = await FlutterImageTexture.loadImg(
         widget.url, widget.width, widget.height);
+    print("hashCode----------$hashCode");
     if (mounted) setState(() {});
   }
 
@@ -57,8 +58,9 @@ class _FlutterImageTextureWidgetState extends State<FlutterImageTextureWidget> {
 
   @override
   void dispose() {
+    // TODO: implement dispose
     if (textureId != null) {
-      Flutterimagetexture.release(textureId?.toString());
+      FlutterImageTexture.release(textureId?.toString());
     }
     super.dispose();
   }
