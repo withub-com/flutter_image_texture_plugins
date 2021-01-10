@@ -20,10 +20,11 @@ NSMutableDictionary<NSNumber *, DuiaflutterextexturePresenter *> *renders;
         Boolean asGif = [call.arguments[@"asGif"] boolValue];
         CGFloat width = [call.arguments[@"width"] floatValue]*[UIScreen mainScreen].scale;
         CGFloat height = [call.arguments[@"height"] floatValue]*[UIScreen mainScreen].scale;
+        NSString *fallback = call.arguments[@"fallback"];
 
         CGSize size = CGSizeMake(width, height);
         
-        DuiaflutterextexturePresenter *render = [[DuiaflutterextexturePresenter alloc] initWithImageStr:imageStr size:size asGif:asGif];
+        DuiaflutterextexturePresenter *render = [[DuiaflutterextexturePresenter alloc] initWithImageStr:imageStr size:size asGif:asGif fallback:fallback];
         int64_t textureId = [textures registerTexture:render];
 
         render.updateBlock = ^{

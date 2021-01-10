@@ -6,9 +6,11 @@ class FlutterImageTexture {
   static const MethodChannel _channel =
       const MethodChannel('FlutterImageTexture');
 
-  static Future<int> loadImg(String url, double width, double height) async {
+  static Future<int> loadImg(
+      String url, double width, double height, String fallback) async {
     final args = <String, dynamic>{
       "url": url,
+      "fallback": fallback,
       "height": height,
       "width": width
     };

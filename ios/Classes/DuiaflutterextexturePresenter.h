@@ -14,7 +14,7 @@
 
 @property(copy,nonatomic) void(^updateBlock) (void);
 
-- (instancetype)initWithImageStr:(NSString*)imageStr size:(CGSize)size asGif:(Boolean)asGif;
+- (instancetype)initWithImageStr:(NSString*)imageStr size:(CGSize)size asGif:(Boolean)asGif fallback:(NSString*)fallback;
 
 -(void)dispose;
 @end

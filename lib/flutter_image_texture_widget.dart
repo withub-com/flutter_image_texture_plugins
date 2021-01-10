@@ -10,7 +10,10 @@ class FlutterImageTextureWidget extends StatefulWidget {
 
   final double height;
 
-  const FlutterImageTextureWidget({Key key, this.url, this.width, this.height})
+  final String fallback;
+
+  const FlutterImageTextureWidget(
+      {Key key, this.url, this.width, this.height, this.fallback})
       : super(key: key);
 
   @override
@@ -29,8 +32,8 @@ class _FlutterImageTextureWidgetState extends State<FlutterImageTextureWidget> {
 
   Future loadImage() async {
     textureId = await FlutterImageTexture.loadImg(
-        widget.url, widget.width, widget.height);
-    print("hashCode----------$hashCode");
+        widget.url, widget.width, widget.height, widget.fallback);
+    // print("hashCode----------$hashCode");
     if (mounted) setState(() {});
   }
 

@@ -22,6 +22,30 @@
 /.env.local
 yarn.lock
 .DS_Store
-/example/build
-/example/.dart_tool
+example/build
+example/.dart_tool
 .dart_tool
+example/.dart_tool/package_config.json
+example/.flutter-plugins-dependencies
+example/.packages
+example/ios/**
+example/ios/Flutter/**
+example/ios/Flutter/.last_build_id
+example/ios/Flutter/App.framework/App
+example/ios/Flutter/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf
+example/ios/Flutter/App.framework/flutter_assets/isolate_snapshot_data
+example/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin
+example/ios/Flutter/App.framework/flutter_assets/vm_snapshot_data
+example/ios/Flutter/Flutter.framework/_CodeSignature/CodeResources
+example/ios/Flutter/Flutter.framework/Flutter
+example/ios/Flutter/Flutter.framework/Info.plist
+example/ios/Flutter/flutter_export_environment.sh
+example/ios/Flutter/Generated.xcconfig
+example/ios/Podfile.lock
+example/ios/Pods/Manifest.lock
+example/ios/Pods/Pods.xcodeproj/project.pbxproj
+example/ios/Pods/Pods.xcodeproj/xcuserdata/jiangyong.xcuserdatad/xcschemes/Pods-Runner.xcscheme
+example/ios/Pods/Target Support Files/Flutter/Flutter.debug.xcconfig
+example/ios/Pods/Target Support Files/Flutter/Flutter.release.xcconfig
+example/pubspec.lock
+example/ios/Flutter/Flutter.framework/Flutter
