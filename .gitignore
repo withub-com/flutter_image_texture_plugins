@@ -49,3 +49,4 @@ example/ios/Pods/Target Support Files/Flutter/Flutter.debug.xcconfig
 example/ios/Pods/Target Support Files/Flutter/Flutter.release.xcconfig
 example/pubspec.lock
 example/ios/Flutter/Flutter.framework/Flutter
+example/.flutter-plugins-dependencies
