@@ -22,8 +22,9 @@ class FlutterImageTextureDelegate(context: Context){
         val width = call.argument<Float>("width")!!
         val height = call.argument<Float>("height")!!
         val url = call.argument<String>("url")
+        val fallback = call.argument<String>("fallback")
         Log.d("FlutterImageTextureDelegate", "entry_id=========" + entry?.id())
-        fluttetrImageHashMap[entry?.id().toString()] = FlutterImageTexture(context, url, width, height, entry,result)
+        fluttetrImageHashMap[entry?.id().toString()] = FlutterImageTexture(context, url, width, height, fallback, entry, result)
     }
 
     fun release(call:MethodCall){
