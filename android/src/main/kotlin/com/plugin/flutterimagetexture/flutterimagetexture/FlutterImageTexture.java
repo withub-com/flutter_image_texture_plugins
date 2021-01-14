@@ -3,10 +3,12 @@ package com.plugin.flutterimagetexture.flutterimagetexture;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Surface;
@@ -66,7 +68,7 @@ public class FlutterImageTexture {
 //        }
     }
 
-    private void loadImage(Context context, String url, final float width,final float height, String fallback) {
+    private void loadImage(final Context context, String url, final float width, final float height, final String fallback) {
         Glide.with(context).asBitmap().load(url).override(dip2px(context,width),dip2px(context,height)).into(new CustomTarget<Bitmap>() {
             @Override
             public void onLoadFailed(@Nullable Drawable errorDrawable) {
