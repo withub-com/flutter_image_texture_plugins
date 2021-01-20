@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Surface;
 
@@ -63,14 +64,8 @@ public class FlutterImageTexture {
 //        }
     }
 
-    private void loadImage(final Context context, final String url, final float width, final float height, final String fallback) {
-        Picasso.get().load(url).resize(dip2px(context, width), dip2px(context, height)).into(new Target() {
-            @Override
-            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                Log.e("FlutterImageTexture-1", "onBitmapLoaded: ");
-                draw(bitmap);
-            }
-
+    private void loadImage(final Context context, String url, final float width, final float height, final String fallback) {
+        Glide.with(context).asBitmap().load(url).override(dip2px(context,width),dip2px(context,height)).into(new CustomTarget<Bitmap>() {
             @Override
             public void onBitmapFailed(Exception e, Drawable errorDrawable) {
                 Log.e("FlutterImageTexture-1", "onBitmapFailed: ");
