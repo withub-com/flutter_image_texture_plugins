@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
+import 'dart:ui' as ui;
 import 'package:flutter/services.dart';
-import 'package:flutterimagetexture/flutter_image_texture.dart';
 import 'package:flutterimagetexture/flutter_image_texture_widget.dart';
 
 void main() {
@@ -26,18 +25,21 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app6'),
-        ),
-        body: Center(
-          child: FlutterImageTextureWidget(
-            url:
-                "https://lxq.nmgdj.gov.cn/oss/unsafe/300x300/default/2020102111492926196nepSfY2NU7vVU.jpg",
-            width: 300,
-            height: 300,
+          appBar: AppBar(
+            title: const Text('Plugin example app6'),
           ),
-        ),
-      ),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                FlutterImageTextureWidget(
+                    url:
+                        "https://img.alicdn.com/imgextra/i4/217101303/O1CN01rV12Qg1LUok76BR8F_!!217101303.jpg"),
+                FlutterImageTextureWidget(
+                    url:
+                        "https://img.alicdn.com/imgextra/i4/217101303/O1CN01rV12Qg1LUok76BR8F_!!217101303.jpg")
+              ],
+            ),
+          )),
     );
   }
 }

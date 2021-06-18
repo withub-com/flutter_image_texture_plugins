@@ -11,8 +11,8 @@ class FlutterImageTexture {
     final args = <String, dynamic>{
       "url": url,
       "fallback": fallback,
-      "height": height,
-      "width": width
+      "height": height ?? 0,
+      "width": width ?? 0
     };
     return await _channel.invokeMethod("load", args);
   }
